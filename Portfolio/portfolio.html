@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DjenanAlKarnavi Portfolio</title>
+
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e8f1f8;
+  color: #1a1a1a;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0077b6;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2rem;
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #48cae4;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  margin-top: 60px;
+}
+
+/* Image Styling */
+.image-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+.profile-img {
+  width: 200px;
+  border-radius: 50%;
+  filter: grayscale(30%) brightness(90%);
+}
+
+/* Table */
+.table-section {
+  padding: 2rem;
+  text-align: center;
+}
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+th, td {
+  border: 2px solid #0077b6;
+  padding: 10px 20px;
+}
+th {
+  background-color: #caf0f8;
+}
+
+/* Image Overlay */
+.overlay-container {
+  position: relative;
+  text-align: center;
+}
+.overlay-container img {
+  width: 100%;
+  height: auto;
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 2rem;
+  background-color: rgba(0, 119, 182, 0.6);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Two Column Layout */
+.columns {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.column {
+  background-color: #d0f0fd;
+  padding: 20px;
+  width: 40%;
+  color: #004e7c;
+  height: 200px;
+}
+
+/* Paragraph Hover */
+.hover-text p {
+  text-align: center;
+  margin: 2rem;
+  transition: color 0.3s ease;
+}
+.hover-text p:hover {
+  color: #0077b6;
+}
+
+/* Image Fade Overlay */
+.fade-container {
+  text-align: center;
+  position: relative;
+}
+.fade-img {
+  position: relative;
+  display: inline-block;
+}
+.fade-img img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+}
+.fade-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  background: rgba(0, 119, 182, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.fade-img:hover .fade-text {
+  opacity: 1;
+}
+
+/* Video Section */
+.video-section video {
+  width: 100%;
+  height: auto;
+}
+
+/* Video Text Overlay */
+.video-container {
+  position: relative;
+}
+.video-container video {
+  width: 100%;
+  display: block;
+}
+.video-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 119, 182, 0.7);
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Work</a></li>
+  </ul>
+</nav>
+
+<!-- Home -->
+<header id="home" class="hero">
+  <h1>Welcome to My Portfolio</h1>
+</header>
+
+<!-- Centered Filtered Image -->
+<section class="image-section">
+  <img src="https://cdn.pixabay.com/photo/2023/09/16/21/31/girl-8257551_1280.jpg" alt="Profile" class="profile-img">
+</section>
+
+<!-- Table -->
+<section id="about" class="table-section">
+  <h2>Skills</h2>
+  <table>
+    <tr>
+      <th>Skill</th>
+      <th>Level</th>
+    </tr>
+    <tr>
+      <td>HTML</td>
+      <td>Excellent</td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>Good</td>
+    </tr>
+    <tr>
+      <td>JavaScript</td>
+      <td>None</td>
+    </tr>
+  </table>
+</section>
+
+<!-- Image with Text Overlay -->
+<section class="overlay-section">
+  <div class="overlay-container">
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_1280.jpg" alt="Overlay Image">
+    <div class="overlay-text">Creative Developer</div>
+  </div>
+</section>
+
+<!-- Two Column Layout -->
+<section class="columns">
+  <div class="column">
+    <h3>About Me</h3>
+    <p>I’m a passionate Student developer creating clean, efficient designs.</p>
+  </div>
+  <div class="column">
+    <h3>Experience</h3>
+    <p>A fresh Student developer looking for more experience.</p>
+  </div>
+</section>
+
+<!-- Hover Paragraph -->
+<section id="projects" class="hover-text">
+  <p>Hover over this text</p>
+</section>
+
+<!-- Image Fade Overlay -->
+<section class="fade-container">
+  <div class="fade-img">
+    <img src="https://cdn.pixabay.com/photo/2016/10/28/07/04/men-1777352_1280.jpg" alt="Fade">
+    <div class="fade-text">Fade Overlay</div>
+  </div>
+</section>
+
+<!-- Video with Text Overlay -->
+<section class="video-overlay">
+  <div class="video-container">
+    <video src="https://cdn.pixabay.com/video/2016/12/31/6962-197634410_tiny.mp4" autoplay muted loop></video>
+    <div class="video-text">This is me in action!</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Portfolio | Djenan AlKarnavi </p>
+</footer>
+
+</body>
+</html>
